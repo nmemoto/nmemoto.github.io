@@ -1,8 +1,10 @@
-import { Layout } from "../components/Layout";
+import { Layout } from "../../components/Layout";
 
 export const meta = {
   title: "Markdown/MDX with Next.js",
 };
+
+export default ({ children }) => <Layout meta={meta}>{children}</Layout>;
 
 # This is Test Page
 
@@ -17,5 +19,3 @@ export const meta = {
 #### test3
 
 テスト 3
-
-export default ({ children }) => <Layout meta={meta}>{children}</Layout>;
