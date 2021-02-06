@@ -1,0 +1,11 @@
+version: "3"
+services:
+  node:
+    build:
+      context: .
+      args:
+        VARIANT: 14
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    volumes:
+      - ..:/workspace
+      - ${HOME}/.ssh:/home/node/.ssh

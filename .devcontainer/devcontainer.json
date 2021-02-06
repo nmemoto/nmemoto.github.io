@@ -1,0 +1,17 @@
+{
+  "name": "nextjs-blog",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "node",
+  "forwardPorts": [3000],
+  "remoteUser": "node",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint"
+  ],
+  "postCreateCommand": "npm install -g npm npm-check-updates"
+}

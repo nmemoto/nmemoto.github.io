@@ -1,0 +1,31 @@
+{
+  "name": "nextjs-blog",
+  "version": "0.0.1",
+  "description": "nmemoto's blog with nextjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nmemoto/nextjs-blog.git"
+  },
+  "author": "nmemoto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmemoto/nextjs-blog/issues"
+  },
+  "homepage": "https://github.com/nmemoto/nextjs-blog#readme",
+  "dependencies": {
+    "next": "^10.0.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "@types/react": "^17.0.1",
+    "typescript": "^4.1.3"
+  }
+}
