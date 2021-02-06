@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/nmemoto/nextjs-blog#readme",
   "dependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^10.0.6",
     "next": "^10.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
