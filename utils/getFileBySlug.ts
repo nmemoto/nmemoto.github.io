@@ -1,4 +1,5 @@
 import fs from "fs";
+import matter from "gray-matter";
 import renderToString from "next-mdx-remote/render-to-string";
 import path from "path";
 import MDXComponents from "../components/MDXcomponents";
@@ -11,12 +12,13 @@ export const getFileBySlug = async (slug) => {
     "utf8"
   );
 
-  const mdxSource = await renderToString(source, {
+  const { data, content } = matter(source);
+  const mdxSource = await renderToString(content, {
     components: MDXComponents,
   });
 
   return {
     source: mdxSource,
-    meta: { title: "Markdown/MDX with Next.js" },
+    meta: data,
   };
 };

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/nmemoto/nextjs-blog#readme",
   "dependencies": {
+    "gray-matter": "^4.0.2",
     "next": "^10.0.6",
     "next-mdx-remote": "^2.1.3",
     "postcss": "^8.0.9",
