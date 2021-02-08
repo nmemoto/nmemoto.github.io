@@ -4,9 +4,9 @@ import MDXComponents from "../../components/MDXcomponents";
 import { getFileBySlug } from "../../utils/getFileBySlug";
 import { getFiles } from "../../utils/getFiles";
 
-const Post = ({ source, meta }) => {
+const Post = ({ source, frontMatter }) => {
   const content = hydrate(source, { components: MDXComponents });
-  return <Layout meta={meta}>{content}</Layout>;
+  return <Layout frontMatter={frontMatter}>{content}</Layout>;
 };
 
 export const getStaticPaths = async () => {

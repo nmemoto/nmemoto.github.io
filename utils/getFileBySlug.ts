@@ -1,3 +1,4 @@
+import { format } from "date-fns-tz";
 import fs from "fs";
 import matter from "gray-matter";
 import renderToString from "next-mdx-remote/render-to-string";
@@ -22,9 +23,20 @@ export const getFileBySlug = async (slug) => {
       ],
     },
   });
-
+  const frontMatter = {
+    ...data,
+    created: format(data.created, "yyyy-MM-dd", {
+      timeZone: "Asia/Tokyo",
+    }),
+    updated: data.updated
+      ? format(data.updated, "yyyy-MM-dd", {
+          timeZone: "Asia/Tokyo",
+        })
+      : "",
+  };
+  console.log(data);
   return {
     source: mdxSource,
-    meta: data,
+    frontMatter,
   };
 };
