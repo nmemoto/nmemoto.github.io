@@ -28,8 +28,17 @@ export const Layout: FC<Props> = ({ children, frontMatter }) => {
         <title>{title}</title>
       </Head>
       <main>
-        <p>{dateStr}</p>
-        {children}
+        <div className="min-h-screen bg-gray-100">
+          {/* Post */}
+          <div className="bg-white px-4 py-6 shadow sm:p-6 sm:rounded-lg m-2">
+            <article>
+              <div className="p-3">
+                <p className="p-1">{dateStr}</p>
+                {children}
+              </div>
+            </article>
+          </div>
+        </div>
       </main>
     </>
   );
