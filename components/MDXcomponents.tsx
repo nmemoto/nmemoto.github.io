@@ -1,3 +1,5 @@
+import { Code } from "./Code";
+
 const MDXComponents = {
   h1: (props) => <h1 className="font-bold text-4xl my-3" {...props} />,
   h2: (props) => <h2 className="font-bold text-3xl my-2" {...props} />,
@@ -14,6 +16,7 @@ const MDXComponents = {
   img: (props) => <img className="h-44" {...props} />,
   ul: (props) => <ul className="list-disc pl-5" {...props} />,
   li: (props) => <li className="py-1" {...props} />,
+  code: (props) => <Code className="py-1" {...props} />,
 };
 
 export default MDXComponents;
