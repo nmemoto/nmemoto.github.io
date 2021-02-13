@@ -22,13 +22,11 @@ export const getFileBySlug = async (slug) => {
       ],
     },
   });
-  console.log(data);
   const frontMatter = {
     ...data,
     created: data.created,
     updated: data.updated,
   };
-  console.log(data);
   return {
     source: mdxSource,
     frontMatter,
