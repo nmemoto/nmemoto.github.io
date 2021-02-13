@@ -12,7 +12,7 @@ type Props = {
   };
 };
 
-export const Layout: FC<Props> = ({ children, frontMatter }) => {
+export const PostLayout: FC<Props> = ({ children, frontMatter }) => {
   const { title, created, updated } = frontMatter;
   const createdJST = utcToZonedTime(parseISO(created), "Asia/Tokyo");
   const updatedJST = utcToZonedTime(parseISO(updated), "Asia/Tokyo");
