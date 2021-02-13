@@ -1,12 +1,12 @@
 import { Code } from "./Code";
 
 const MDXComponents = {
-  h1: (props) => <h1 className="font-bold text-4xl my-3" {...props} />,
-  h2: (props) => <h2 className="font-bold text-3xl my-2" {...props} />,
-  h3: (props) => <h3 className="font-bold text-2xl my-1" {...props} />,
-  h4: (props) => <h4 className="font-bold text-xl my-1" {...props} />,
-  h5: (props) => <h5 className="font-bold text-lg my-1" {...props} />,
-  h6: (props) => <h6 className="font-bold text-base my-1" {...props} />,
+  h1: (props) => <h1 className="font-bold text-4xl mt-2 mb-3" {...props} />,
+  h2: (props) => <h2 className="font-bold text-3xl mt-3 mb-2" {...props} />,
+  h3: (props) => <h3 className="font-bold text-2xl mt-2 mb-1" {...props} />,
+  h4: (props) => <h4 className="font-bold text-xl mt-2 mb-1" {...props} />,
+  h5: (props) => <h5 className="font-bold text-lg mt-2 mb-1" {...props} />,
+  h6: (props) => <h6 className="font-bold text-base mt-2 mb-1" {...props} />,
   a: (props) => (
     <a
       className="text-blue-600 hover:text-blue-400"
@@ -16,7 +16,7 @@ const MDXComponents = {
     />
   ),
   img: (props) => <img className="block h-52 mx-auto my-5" {...props} />,
-  ul: (props) => <ul className="list-disc pl-5 py-1" {...props} />,
+  ul: (props) => <ul className="list-disc pl-5" {...props} />,
   li: (props) => <li className="" {...props} />,
   ol: (props) => <ol className="list-decimal pl-5" {...props} />,
   table: (props) => (
