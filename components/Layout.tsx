@@ -27,7 +27,7 @@ export const Layout: FC<Props> = ({ children, frontMatter }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <main>
+      <main className="text-base">
         <div className="min-h-screen bg-gray-100">
           {/* Post */}
           <div className="bg-white px-4 py-6 shadow sm:p-6 sm:rounded-lg m-2">
