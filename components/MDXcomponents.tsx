@@ -16,9 +16,9 @@ const MDXComponents = {
     />
   ),
   img: (props) => <img className="block h-52 mx-auto my-5" {...props} />,
-  ul: (props) => <ul className="list-disc pl-5" {...props} />,
-  li: (props) => <li className="" {...props} />,
-  ol: (props) => <ol className="list-decimal pl-5" {...props} />,
+  ul: (props) => <ul className="list-disc pl-5 text-gray-800" {...props} />,
+  li: (props) => <li className="py-1" {...props} />,
+  ol: (props) => <ol className="list-decimal pl-5 text-gray-800" {...props} />,
   table: (props) => (
     <div className="shadow overflow-hidden border-b border-gray-300 sm:rounded-lg my-5">
       <table className="min-w-full divide-y divide-gray-200" {...props} />
