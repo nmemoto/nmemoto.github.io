@@ -19,31 +19,27 @@ const Index: NextPage<Props> = ({ posts }) => {
 
   return (
     <AllLayout>
-      <main className="mt-1.5 max-w-7xl sm:px-6 lg:px-8 bg-white">
-        <div className="mx-auto">
-          <ul className="divide-y divide-gray-200 mx-auto ">
-            {sortedPosts.map((post) => {
-              return (
-                <li
-                  key={post.slug}
-                  className="flex bg-white hover:bg-gray-100 px-4 py-4 sm:px-6"
-                >
-                  <Link href={`/posts/${post.slug}`}>
-                    <a>
-                      <h2 className="text-xl leading-6 font-bold text-gray-800">
-                        {post.title}
-                      </h2>
-                      <p className="text-sm text-gray-500 mt-1">
-                        {post.created}
-                      </p>
-                    </a>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </main>
+      <div className="mx-auto">
+        <ul className="divide-y divide-gray-200 mx-auto ">
+          {sortedPosts.map((post) => {
+            return (
+              <li
+                key={post.slug}
+                className="flex hover:bg-gray-200 px-4 py-4 sm:px-6"
+              >
+                <Link href={`/posts/${post.slug}`}>
+                  <a>
+                    <h2 className="text-xl leading-6 font-bold text-gray-800">
+                      {post.title}
+                    </h2>
+                    <p className="text-sm text-gray-500 mt-1">{post.created}</p>
+                  </a>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </AllLayout>
   );
 };
