@@ -25,7 +25,7 @@ export const AllLayout: FC<Props> = ({ children, frontMatter }) => {
         <meta name="description" content={description} />
       </Head>
       <div className="bg-gray-100 h-screen">
-        <div className="p-4 max-w-full shadow z-20">
+        <div className="p-4 max-w-full shadow-md z-20">
           <Link href="/">
             <a className="text-2xl font-semibold text-gray-800">
               nmemoto.github.io

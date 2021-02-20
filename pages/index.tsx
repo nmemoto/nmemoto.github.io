@@ -20,12 +20,12 @@ const Index: NextPage<Props> = ({ posts }) => {
   return (
     <AllLayout>
       <div className="mx-auto">
-        <ul className="divide-y divide-gray-200 mx-auto ">
+        <ul className="divide-y divide-gray-300 mx-auto ">
           {sortedPosts.map((post) => {
             return (
               <li
                 key={post.slug}
-                className="flex hover:bg-gray-200 px-4 py-4 sm:px-6"
+                className="flex hover:bg-gray-300 px-4 py-4 sm:px-6"
               >
                 <Link href={`/posts/${post.slug}`}>
                   <a>
