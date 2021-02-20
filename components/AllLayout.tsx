@@ -24,7 +24,7 @@ export const AllLayout: FC<Props> = ({ children, frontMatter }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Head>
-      <div className="bg-gray-50 h-screen">
+      <div className="bg-gray-100 h-screen">
         <div className="p-4 max-w-full shadow z-20">
           <Link href="/">
             <a className="text-2xl font-semibold text-gray-800">
@@ -32,7 +32,7 @@ export const AllLayout: FC<Props> = ({ children, frontMatter }) => {
             </a>
           </Link>
         </div>
-        <main className="text-base text-gray-800 max-w-7xl mt-2 sm:px-6 lg:px-8">
+        <main className="text-base text-gray-800 max-w-7xl py-2 sm:px-6 lg:px-8">
           {children}
         </main>
       </div>

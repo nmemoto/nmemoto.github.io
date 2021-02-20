@@ -1,12 +1,11 @@
 import { Code } from "./Code";
 
 const MDXComponents = {
-  h1: (props) => <h1 className="font-bold text-4xl mt-2 mb-3" {...props} />,
-  h2: (props) => <h2 className="font-bold text-3xl mt-3 mb-2" {...props} />,
-  h3: (props) => <h3 className="font-bold text-2xl mt-2 mb-1" {...props} />,
-  h4: (props) => <h4 className="font-bold text-xl mt-2 mb-1" {...props} />,
-  h5: (props) => <h5 className="font-bold text-lg mt-2 mb-1" {...props} />,
-  h6: (props) => <h6 className="font-bold text-base mt-2 mb-1" {...props} />,
+  h1: (props) => <h2 className="font-bold text-3xl py-2" {...props} />,
+  h2: (props) => <h3 className="font-bold text-2xl py-2" {...props} />,
+  h3: (props) => <h4 className="font-bold text-xl py-2" {...props} />,
+  h4: (props) => <h5 className="font-bold text-lg py-2" {...props} />,
+  h5: (props) => <h6 className="font-bold text-base py-2" {...props} />,
   a: (props) => (
     <a
       className="text-blue-600 hover:text-blue-400"

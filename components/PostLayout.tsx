@@ -12,7 +12,7 @@ type Props = {
 };
 
 export const PostLayout: FC<Props> = ({ children, frontMatter }) => {
-  const { created, updated } = frontMatter;
+  const { title, created, updated } = frontMatter;
   const createdJST = utcToZonedTime(parseISO(created), "Asia/Tokyo");
   const createdFmt = format(createdJST, "yyyy/MM/dd HH:mm");
   const createdStr = `created: ${createdFmt}`;
@@ -28,10 +28,13 @@ export const PostLayout: FC<Props> = ({ children, frontMatter }) => {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
-        <div className="bg-white shadow px-2 py-2 sm:px-6 sm:rounded-lg">
+        <div className="shadow px-2 py-2 sm:px-6 sm:rounded-lg">
           <article>
             <div className="p-1">
-              <p className="py-1">{dateStr}</p>
+              <div className="py-2 mb-2">
+                <h1 className="font-bold text-4xl py-2">{title}</h1>
+                <p className="text-sm text-gray-600 py-1">{dateStr}</p>
+              </div>
               {children}
             </div>
           </article>
