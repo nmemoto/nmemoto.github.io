@@ -1,6 +1,6 @@
 import { NextPage } from "next";
-import Head from "next/head";
 import Link from "next/link";
+import { AllLayout } from "../components/AllLayout";
 import getPosts from "../utils/getPosts";
 
 type Props = {
@@ -18,17 +18,7 @@ const Index: NextPage<Props> = ({ posts }) => {
   });
 
   return (
-    <>
-      <Head>
-        <title>{`nmemoto.github.io`}</title>
-      </Head>
-      <div className="p-4 max-w-full shadow">
-        <Link href="/">
-          <a className="text-2xl font-semibold text-gray-800">
-            nmemoto.github.io
-          </a>
-        </Link>
-      </div>
+    <AllLayout>
       <main className="mt-1.5 max-w-7xl sm:px-6 lg:px-8 bg-white">
         <div className="mx-auto">
           <ul className="divide-y divide-gray-200 mx-auto ">
@@ -54,7 +44,7 @@ const Index: NextPage<Props> = ({ posts }) => {
           </ul>
         </div>
       </main>
-    </>
+    </AllLayout>
   );
 };
 

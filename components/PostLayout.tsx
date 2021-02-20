@@ -1,6 +1,5 @@
 import { format, parseISO } from "date-fns";
 import { utcToZonedTime } from "date-fns-tz";
-import Head from "next/head";
 import { FC } from "react";
 
 type Props = {
@@ -13,20 +12,21 @@ type Props = {
 };
 
 export const PostLayout: FC<Props> = ({ children, frontMatter }) => {
-  const { title, created, updated } = frontMatter;
+  const { created, updated } = frontMatter;
   const createdJST = utcToZonedTime(parseISO(created), "Asia/Tokyo");
-  const updatedJST = utcToZonedTime(parseISO(updated), "Asia/Tokyo");
   const createdFmt = format(createdJST, "yyyy/MM/dd HH:mm");
-  const updatedFmt = format(updatedJST, "yyyy-MM-dd HH:mm");
   const createdStr = `created: ${createdFmt}`;
-  const updatedStr = `updated: ${updatedFmt}`;
-
+  let updatedStr;
+  if (updated) {
+    const updatedJST = updated
+      ? utcToZonedTime(parseISO(updated), "Asia/Tokyo")
+      : null;
+    const updatedFmt = format(updatedJST, "yyyy-MM-dd HH:mm");
+    updatedStr = `updated: ${updatedFmt}`;
+  }
   const dateStr = updated ? `${createdStr} / ${updatedStr}` : `${createdStr}`;
   return (
     <>
-      <Head>
-        <title>{title}</title>
-      </Head>
       <main className="text-base text-gray-800">
         <div className="min-h-screen bg-gray-100">
           {/* Post */}
