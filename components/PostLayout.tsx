@@ -5,7 +5,7 @@ import { FC } from "react";
 type Props = {
   frontMatter: {
     title: string;
-    summary: string;
+    description: string;
     created: string;
     updated?: string;
   };

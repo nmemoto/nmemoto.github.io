@@ -5,7 +5,7 @@ import { FC } from "react";
 type Props = {
   frontMatter?: {
     title: string;
-    summary: string;
+    description: string;
     created: string;
     updated?: string;
   };
@@ -16,7 +16,7 @@ export const AllLayout: FC<Props> = ({ children, frontMatter }) => {
     ? `${frontMatter.title} | nmemoto.github.io`
     : "nmemoto.github.io";
   const description = frontMatter
-    ? `${frontMatter.summary}`
+    ? `${frontMatter.description}`
     : "nmemoto's notes, blog, tips";
   return (
     <div>

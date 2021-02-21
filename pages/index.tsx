@@ -6,7 +6,7 @@ import getPosts from "../utils/getPosts";
 type Props = {
   posts: {
     title: string;
-    summary: string;
+    description: string;
     created: string;
     slug: string;
   }[];
