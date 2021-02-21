@@ -30,6 +30,12 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params: { slug } }) => {
   const props = await getFileBySlug(slug);
 
+  if (!props) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props,
   };
