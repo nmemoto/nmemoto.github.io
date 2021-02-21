@@ -1,5 +1,11 @@
 module.exports = {
-  purge: [],
+  purge: [
+    "./pages/**/*.tsx",
+    "./contents/**/*.mdx",
+    "./components/**/*.tsx",
+    "./utils/**/*.ts",
+    "./next.config.js",
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -8,4 +14,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
