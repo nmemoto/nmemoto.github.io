@@ -27,7 +27,7 @@ export const PostLayout: FC<Props> = ({ children, frontMatter }) => {
   const dateStr = updated ? `${createdStr} / ${updatedStr}` : `${createdStr}`;
   return (
     <>
-      <div className="min-h-screen bg-gray-50">
+      <div className="bg-gray-50">
         <div className="shadow px-2 py-2 sm:px-6 sm:rounded-lg">
           <article>
             <div className="p-1">
