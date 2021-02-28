@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { FC } from "react";
+import { GA_TRACKING_ID } from "../utils/gtag";
 import { Profile } from "./Profile";
 
 type Props = {
@@ -24,6 +25,22 @@ export const AllLayout: FC<Props> = ({ children, frontMatter }) => {
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
       </Head>
       <div className="bg-gray-100 h-full min-h-screen">
         <div className="p-4 max-w-full shadow-md z-20">
