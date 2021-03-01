@@ -42,7 +42,7 @@ export const AllLayout: FC<Props> = ({ children, frontMatter }) => {
           }}
         />
       </Head>
-      <div className="bg-gray-100 h-full min-h-screen">
+      <div className="bg-gray-100 min-h-screen flex flex-col">
         <div className="p-4 max-w-full shadow-md z-20">
           <Link href="/">
             <a className="text-2xl font-semibold text-gray-800">
@@ -50,7 +50,7 @@ export const AllLayout: FC<Props> = ({ children, frontMatter }) => {
             </a>
           </Link>
         </div>
-        <main className="text-base text-gray-800 max-w-7xl py-2 sm:px-6 lg:px-8">
+        <main className="flex-grow text-base text-gray-800 max-w-7xl py-2 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:space-x-2">
             <div className="flex-grow">{children}</div>
             <div className="mt-4 md:mt-0">
@@ -58,6 +58,12 @@ export const AllLayout: FC<Props> = ({ children, frontMatter }) => {
             </div>
           </div>
         </main>
+        <footer className="p-4 w-full text-center text-gray-500">
+          <div className="py-2">
+            <small>&copy; 2021, nmemoto All rights reserved.</small>
+            <p className="text-xs mt-2">This website uses Google Analytics.</p>
+          </div>
+        </footer>
       </div>
     </div>
   );
