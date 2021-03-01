@@ -26,6 +26,11 @@ jobs:
       - name: Install
         run: npm install --frozen-lockfile
 
+      - name: Add .env
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
+        run: echo NEXT_PUBLIC_GA_ID=${NEXT_PUBLIC_GA_ID} > .env
+
       - name: Build
         run: npm run build
 
