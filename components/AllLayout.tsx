@@ -50,8 +50,8 @@ export const AllLayout: FC<Props> = ({ children, frontMatter }) => {
             </a>
           </Link>
         </div>
-        <main className="flex-grow text-base text-gray-800 max-w-7xl py-2 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:space-x-2">
+        <main className="flex-grow text-base text-gray-800 min-w-full py-2 sm:px-6 lg:px-8 flex flex-col">
+          <div className="flex-grow md:flex-row md:space-x-2 flex flex-col">
             <div className="flex-grow">{children}</div>
             <div className="mt-4 md:mt-0">
               <Profile />
