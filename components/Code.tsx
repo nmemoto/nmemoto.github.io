@@ -15,7 +15,7 @@ export const Code = ({ children, className }) => {
           style={style}
         >
           {tokens
-            .filter((token) => token.length > 1)
+            .filter((_, i) => tokens.length != i + 1)
             .map((line, i) => (
               <div
                 className="table-row"
